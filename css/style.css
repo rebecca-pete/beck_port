@@ -22,7 +22,7 @@
     --fs-body: 1rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0, 0.25),
-            0.125em 0.125em 0.25em, rgba(0,0,0,.15);
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
 
 
 }
@@ -37,6 +37,11 @@
 }
 
 /* General styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -189,6 +194,27 @@ header {
     top: 1em;
     z-index: 1000;
 }
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
 
 /* Hamburger */
 .hamburger {
