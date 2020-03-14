@@ -3,28 +3,27 @@
 *::after {
     box-sizing: border-box;
 }
-/* Custom Properties, */
+
+/* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Lora', serif;
-    --ff-secondary: 'Roboto Slab', serif;
-
-    --fw-reg: 400;
-    --fw-bold: 700;
-
-    --clr-light:#fff;
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
-
+    
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-
+    
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-            0.125em 0.125em 0.25em rgba(0,0,0,.15);
-
-
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
@@ -38,9 +37,11 @@
 
 /* General styles */
 
-html {
+/* endable this to add smooth scrolling */
+/* html {
     scroll-behavior: smooth;
-}
+} */
+
 
 body {
     background: var(--clr-light);
@@ -53,9 +54,7 @@ body {
 
 section {
     padding: 5em 2em;
-
 }
-
 
 img {
     display: block;
@@ -69,7 +68,8 @@ strong { font-weight: var(--fw-bold) }
     outline-offset: 3px;
 }
 
-/* Button */
+/* Buttons */
+
 .btn {
     display: inline-block;
     padding: .5em 2.5em;
@@ -91,16 +91,16 @@ strong { font-weight: var(--fw-bold) }
 /* Typography */
 
 h1,
-h2, 
+h2,
 h3 {
     line-height: 1;
     margin: 0;
-
 }
 
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+
 
 .section__title {
     margin-bottom: .25em;
@@ -117,7 +117,6 @@ h3 { font-size: var(--fs-h3) }
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
-
 }
 
 .section__subtitle--intro,
@@ -155,7 +154,7 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-
+    
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -214,12 +213,14 @@ header {
 }
 
 
-/* Hamburger */
+
+
+
+
 .hamburger {
     display: block;
     position: relative;
 }
-
 
 .hamburger,
 .hamburger::before,
@@ -231,6 +232,7 @@ header {
     transition: transform 250ms ease-in-out;
 }
 
+
 .hamburger::before,
 .hamburger::after {
     content: '';
@@ -240,10 +242,10 @@ header {
 }
 
 .hamburger::before { top: 6px; }
-
 .hamburger::after { bottom: 6px; }
 
-/* Intro section */
+
+/*  Intro section  */
 
 .intro {
     position: relative;
@@ -257,25 +259,25 @@ header {
     display: inline-block;
 }
 
-
 @media (min-width: 600px) {
     .intro {
         display: grid;
         width: min-content;
         margin: 0 auto;
         grid-column-gap: 1em;
-        grid-template-areas:
+        grid-template-areas: 
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
     }
+    
     .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
-
-    } 
+    }    
+    
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -284,13 +286,12 @@ header {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
-
-
     }
-
 }
 
-/* My services section */
+
+
+/*  My services section  */
 
 .my-services {
     background-color: var(--clr-dark);
@@ -314,8 +315,6 @@ header {
     margin: 0.5em auto 1em;
     background: var(--clr-light);
     opacity: 0.25;
-
-
 }
 
 .services {
@@ -334,10 +333,12 @@ header {
         margin-left: auto;
         margin-right: auto;
     }
+    
     .service + .service {
         margin-left: 2em;
     }
 }
+
 
 .about-me {
     max-width: 1000px;
@@ -352,16 +353,17 @@ header {
     .about-me {
         display: grid;
         grid-template-columns: 1fr 200px;
-        grid-template-areas:
+        grid-template-areas: 
             "title img"
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
     }
+    
     .section__title--about {
         grid-area: title;
     }
-
+    
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
@@ -369,9 +371,9 @@ header {
         left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
-        padding-right: calc(200px + 2em);
+        padding-right: calc(200px + 4em);
     }
-
+    
     .about-me__img {
         grid-area: img;
         position: relative;
@@ -379,19 +381,17 @@ header {
     }
 }
 
-/* My work */
+/* My Work */
 
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: center;
-
+    text-align: center;    
 }
 
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    
 }
 
 .portfolio__item {
@@ -412,12 +412,12 @@ header {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
- 
     transform: scale(1.2);
     opacity: .5;
 }
 
-/* Footer */
+
+/* footer */
 
 .footer {
     background: #111;
@@ -425,6 +425,7 @@ header {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
+
 }
 
 .footer a { 
@@ -459,20 +460,4 @@ header {
 
 .social-list__link {
     padding: .5em;
-}
-
-/* Individual portfolio item styles */
-
-.portfolio-item-individual {
-    padding: 0 2em 2em;
-    max-width: 1000px;
-    margin: 0 auto;
-
-}
-
-.portfolio-item-individual p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    
 }
