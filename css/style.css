@@ -417,6 +417,10 @@ header {
     opacity: .5;
 }
 
+.photo__text {
+    font-size: .8rem
+}
+
 /* Footer */
 
 .footer {
