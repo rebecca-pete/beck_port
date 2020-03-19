@@ -1,0 +1,5 @@
+server {
+    listen 80;
+    server_name rebeccapetersonsoprano.com www.rebeccapetersonsoprano.com;
+    return 301 https://rebeccapetersonsoprano.com$request_uri;
+} 
