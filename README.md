@@ -1,4 +1,4 @@
-# Becky Peterson - Portfolio
+# Rebecca Peterson - Portfolio
 
 A portfolio highlighting the work of Rebecca Peterson.
 
