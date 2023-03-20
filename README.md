@@ -1,9 +1,9 @@
 # Becky Peterson - Portfolio
 
-A portfolio highlighting the work of Becky Peterson.
+A portfolio highlighting the work of Rebecca Peterson.
 
-Software Engineer
+* Technical writer
 
-Technical Writer
+* Opera singer
 
-Opera Singer
+* Developer
