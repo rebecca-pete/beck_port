@@ -320,6 +320,7 @@ header {
 
 .services {
     margin-bottom: 4em;
+    opacity: 0;
 }
 
 .service {
