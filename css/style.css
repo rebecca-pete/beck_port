@@ -60,6 +60,7 @@ section {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 strong { font-weight: var(--fw-bold) }
@@ -347,6 +348,8 @@ header {
 
 .about-me__img {
     box-shadow: var(--bs);
+    max-width: 100%;
+    height: auto;
 }
 
 @media (min-width: 600px) {
